@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   
+  background:url("../images/kbc-11.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;;
+  box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0, 0, 0.4);
+}
+.login-container{
+    width: 30%;
+    margin: 15em 50em;
+    background-color: #0037c7;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    padding: 4em 2em;
+    border-radius: 10px;
+}
+#email{
+    font-size: 1.2rem;
+    padding: .2em;
+    border-radius: 10px;
+    width: 25vw;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+}
+#password{
+    font-size: 1.2rem;
+    padding: .2em;
+    border-radius: 10px;
+    width: 25vw;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+}
+.email{
+    font-size: 1.2em;
+    color: white;
+}
+.password{
+    font-size: 1.2em;
+    color: white;
+}
+#login{
+    margin-top: 30px;
+    width: 30%;
+    padding: .4em;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+#login:hover{
+    background-color: #497bf8;
+    color: white;
+}
+#signup{
+    margin-top: 30px;
+    width: 30%;
+    padding: .4em;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+#signup:hover{
+    background-color: #497bf8;
+    color: white;
+}
