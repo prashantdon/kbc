@@ -270,15 +270,3 @@ lifeFlip.addEventListener("click",()=>{
     flipBtn.disabled = true;
     
 })
-let count = 0;
-function timerStart(){
-    intervalId = setInterval(()=>{
-        timer.innerText = count
-       count++
-    },1000)
-}
-function timerStop(){
-    if(count==60){
-        clearInterval(intervalId)
-    }
-}
