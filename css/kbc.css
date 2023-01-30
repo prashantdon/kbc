@@ -77,7 +77,7 @@ body {
     border-left: 5px solid #055de5;
     width: 25%;
     border-bottom: 5px solid #055de5;
-    
+    margin-top: -4em;
 }
 
 .lifeline-container {
@@ -87,19 +87,54 @@ body {
 
 .lifeline-img {
     border: 3px solid #055de5;
-    border-radius: 50%;
+    border-radius: 25%;
     margin: 1em .2em;
+    height: 10vh;
 }
 
 .lifeline-img:hover {
     background-color: rgba(11, 91, 161, 0.452);
 }
-
-.lifeline-img>img {
-    width: 50%;
-    margin-left: 20px;
+.fiftyBtn{
+    background-color: transparent;
+     margin-top: .2em;
+     width: 80%;
+     margin-left: 12px;
+     border-radius: 20px;
+     border: none;
+     
+}
+.fiftyBtn>img {
+    width: 60%;
+    
 }
 
+.flipBtn{
+     background-color: transparent;
+     margin-top: .2em;
+     width: 80%;
+     margin-left: 12px;
+     border-radius: 20px;
+    
+     
+}
+.flipBtn>img {
+    width: 60%;
+    
+}
+.audienceBtn{
+    background-color: transparent;
+     margin-top: .5em;
+     
+     width: 80%;
+     margin-left: 12px;
+     border-radius: 20px;
+     
+}
+.audienceBtn>img {
+    width: 60%;
+    
+}
 .lifeline-permission{
     display: none;
     position: absolute;
@@ -107,7 +142,7 @@ body {
     left: -5em;
     background-color:#002069 ;
     color: white;
-    padding: 4em;
+    padding: 3.8em;
     font-size: 1.8rem;
     width: 140%;
     border-radius: 50px;
@@ -125,7 +160,6 @@ body {
 }
 #yes:hover{
    background-color:#7192df ;
-   width: 25%;
    transition: 1s;
    color: white;
 }
@@ -140,7 +174,7 @@ body {
 }
 #no:hover{
    background-color:#7192df ;
-   width: 25%;
+   
    transition: 1s;
    color: white;
 }
@@ -314,7 +348,16 @@ body {
     font-weight: bold;
     color: white;
 }
-
+.show-name{
+    width: 20%;
+    background-color: transparent;
+    padding: .4em;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+}
 #quit:hover{
     background-color: #012e99;
 }
@@ -379,3 +422,67 @@ body {
 .audience-poll:hover{
     background-color: black;
  }
+ .play{
+    /* display: none; */
+    position: absolute;
+    top: -10em;
+    left: -5em;
+    background-color:#002069 ;
+    color: white;
+    padding: 3em;
+    font-size: 1.8rem;
+    width: 140%;
+    border-radius: 50px;
+    border: 5px solid white;
+    transition: .7s;
+    height: 60vh;
+ }
+ .start-quiz{
+    width: 20%;
+    background-color: transparent;
+    padding: .4em;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+ }
+ 
+ .exit-quiz{
+    width: 20%;
+    background-color: transparent;
+    padding: .4em;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+ }
+ 
+
+.your-name{
+   padding: .4em;
+   border: none;
+   border-radius: 10px;
+   width: 40%;
+   margin-bottom: 10px;
+   outline: none;
+}
+
+.won-prize{
+    display: none;
+    position: absolute;
+    top: -10em;
+    left: -5em;
+    background-color:#002069 ;
+    color: white;
+    padding: 3em;
+    font-size: 1.8rem;
+    width: 140%;
+    border-radius: 50px;
+    border: 5px solid white;
+    transition: .7s;
+    height: 40vh;
+}
+

@@ -152,10 +152,10 @@ export const queSet1 = [
     {
         "prompt": " Which part of the plant absorbs water and nutrients from the soil?",
         "options": [
-            { "text": "Anushka Sharma", "correct": false },
-            { "text": "Sakshi Singh Rawat", "correct": false },
-            { "text": "Mahesh Bhupath", "correct": false },
-            { "text": "Sharmila Tagore", "correct": true }
+            { "text": "Stem", "correct": false },
+            { "text": "Buds", "correct": false },
+            { "text": "leafs", "correct": false },
+            { "text": "Roots", "correct": true }
         ],
         "correctOption": 4
     },

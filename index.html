@@ -19,6 +19,7 @@
         <div class="start-game">
             <button id="start">Start</button>
             <button id="quit">Quit</button>
+            <button class="show-name">Your Name</button>
             <div class="prize-money">&#x20B9 <span class="money"></span></div>
         </div>
         <div class="container">
@@ -28,69 +29,69 @@
                 </div>
                 <div class="aside">
                     <div class="lifeline-container">
-                        <div class="lifeline-img fifty-fifty"><img src="./images/fifty_fifty.png" alt=""></div>
-                        <div class="lifeline-img flip"><img src="./images/flip_the_question.png" alt=""></div>
-                        <div class="lifeline-img audience-poll"><img src="./images/audience_poll.png" alt=""></div>
+                        <div class="lifeline-img fifty-fifty"><button class="fiftyBtn"><img src="./images/fifty_fifty.png" alt=""> </button></div>
+                        <div class="lifeline-img flip"><button class="flipBtn"><img src="./images/flip_the_question.png" alt=""></button></div>
+                        <div class="lifeline-img audience-poll"><button class="audienceBtn"><img src="./images/audience_poll.png" alt=""></button></div>
 
                     </div>
-                    <div>
-                        <div class="prize-15 hover-white prize-increase" id="14">
+                    <div class="moneyContainer">
+                        <div class="prize-15 hover-white prize-increase" id="24">
                             <p>15</p>
                             <p>Rs 5 Crore</p>
                         </div>
-                        <div class="prize-14 hover prize-increase" id="13">
+                        <div class="prize-14 hover prize-increase" id="23">
                             <p>14</p>
                             <p>1 Crore</p>
                         </div>
-                        <div class="prize-13 hover prize-increase" id="12">
+                        <div class="prize-13 hover prize-increase" id="22">
                             <p>13</p>
                             <p>50,00,000</p>
                         </div>
-                        <div class="prize-12 hover prize-increase" id="11">
+                        <div class="prize-12 hover prize-increase" id="22">
                             <p>12</p>
                             <p>25,00,000</p>
                         </div>
-                        <div class="prize-11 hover prize-increase" id="10">
+                        <div class="prize-11 hover prize-increase" id="21">
                             <p>11</p>
                             <p>12,50,000</p>
                         </div>
-                        <div class="prize-10 hover-white prize-increase" id="9">
+                        <div class="prize-10 hover-white prize-increase" id="20">
                             <p>10</p>
                             <p>6,25,000</p>
                         </div>
-                        <div class="prize-09 hover prize-increase" id="8">
+                        <div class="prize-09 hover prize-increase" id="19">
                             <p>09</p>
                             <p>3,20,000</p>
                         </div>
-                        <div class="prize-08 hover prize-increase">
+                        <div class="prize-08 hover prize-increase" id="18">
                             <p>08</p>
                             <p>1,60,000</p>
                         </div>
-                        <div class="prize-07 hover prize-increase" id="7">
+                        <div class="prize-07 hover prize-increase" id="17">
                             <p>07</p>
                             <p>80,000</p>
                         </div>
-                        <div class="prize-06 hover prize-increase" id="6">
+                        <div class="prize-06 hover prize-increase" id="16">
                             <p>06</p>
                             <p>40,000</p>
                         </div>
-                        <div class="prize-05 hover-white prize-increase" id="5">
+                        <div class="prize-05 hover-white prize-increase" id="15">
                             <p>05</p>
                             <p>20,000</p>
                         </div>
-                        <div class="prize-04 hover prize-increase" id="4">
+                        <div class="prize-04 hover prize-increase" id="14">
                             <p>04</p>
                             <p>10,000</p>
                         </div>
-                        <div class="prize-03 hover prize-increase" id="3">
+                        <div class="prize-03 hover prize-increase" id="13">
                             <p>03</p>
                             <p>5,000</p>
                         </div>
-                        <div class="prize-02 hover prize-increase" id="2">
+                        <div class="prize-02 hover prize-increase" id="12">
                             <p>02</p>
                             <p>2,000</p>
                         </div>
-                        <div class="prize-01 hover-white prize-increase" id="1">
+                        <div class="prize-01 hover-white prize-increase" id="11">
                             <p>01</p>
                             <p>1,000</p>
                         </div>
@@ -137,11 +138,11 @@
                 </div>
             </div>
             <div class="option-container">
-                <div>
+                <div class="option-container_child1">
                     <button class="option optionhover option1 answer" id="1">Option 1</button>
                     <button class="option optionhover option2 answer" id="2">Option 2</button>
                 </div>
-                <div>
+                <div class="option-container_child2">
                     <button class="option optionhover option3 answer" id="3">Option 3</button>
                     <button class="option optionhover option4 answer" id="4">Option 4</button>
                 </div>
@@ -161,13 +162,28 @@
                     <p class="lifeline-que">Do you want to use Lifeline?</p>
                     <button id="yes">Yes</button>
                     <button id="no">No</button>
-                </div> 
+                </div>
                 <div class="lifeline-choose">
                     <p>Which Lifeline do you want to use?</p>
                     <div class="lifeline-select">
                         <div class=" fifty-fifty life-fifty"><img src="./images/fifty_fifty.png" alt=""></div>
                         <div class=" flip life-flip"><img src="./images/flip_the_question.png" alt=""></div>
-                        <div class=" audience-poll life-audience-poll"><img src="./images/audience_poll.png" alt=""></div>
+                        <div class=" audience-poll life-audience-poll"><img src="./images/audience_poll.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="play">
+                    <div>
+                        <p>Welcome to Kaun Banega CrorePati</p>
+                        <input class="your-name" type="text" placeholder="Enter your name" required>
+                        <p></p>
+                        <button class="start-quiz">start</button>
+                        <button class="exit-quiz">Exit</button>
+                    </div>
+                </div>
+                <div class="won-prize">
+                    <div>
+                        <p>Congratulation <span id="winnerName"></span> You Won</p>
                     </div>
                 </div>
             </div>
