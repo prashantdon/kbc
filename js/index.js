@@ -31,61 +31,39 @@ const lifeAudiencePoll = document.querySelector(".life-audience-poll")
 const chooseLifeline = document.querySelector(".lifeline-choose")
 const moneyWon = document.querySelector(".money")
 const prizeMoney1 = document.querySelector(".prize-01")
-const prizeMoney2 = document.querySelector(".prize-02")
-const prizeMoney3 = document.querySelector(".prize-03")
-const prizeMoney4 = document.querySelector(".prize-04")
-const prizeMoney5 = document.querySelector(".prize-05")
-const prizeMoney6 = document.querySelector(".prize-06")
-const prizeMoney7 = document.querySelector(".prize-07")
-const prizeMoney8 = document.querySelector(".prize-08")
-const prizeMoney9 = document.querySelector(".prize-09")
-const prizeMoney10 = document.querySelector(".prize-10")
-const prizeMoney11 = document.querySelector(".prize-11")
-const prizeMoeny12 = document.querySelector(".prize-12")
-const prizeMOney13 = document.querySelector(".prize-13")
-const prizeMoney14 = document.querySelector(".prize-14")
-const prizeMoeny15 = document.querySelector(".prize-15")
-const prizeIncrease = document.querySelectorAll(".prize-increase")
-const prizeContainer = document.querySelector(".prize-increase")
+
 const yourName = document.querySelector(".your-name");
 const showYourName = document.querySelector(".show-name");
 const startQuiz = document.querySelector(".start-quiz")
 const exitQuiz = document.querySelector(".exit-quiz")
 const play = document.querySelector(".play")
-const optionParent1 = document.querySelector(".option-container_child1");
-const optionParent2 = document.querySelector(".option-container_child2");
+
 const congratsMsg = document.querySelector(".won-prize");
 const optionContainer1 = document.querySelector(".option-container_child1")
 const optionContainer2 = document.querySelector(".option-container_child2")
 const fiftyBtn = document.querySelector(".fiftyBtn")
 const winnerName = document.getElementById("winnerName");
-const flipBtn= document.querySelector(".flipBtn")
+const flipBtn = document.querySelector(".flipBtn")
+
 const moneyContainer = document.querySelector(".moneyContainer");
-
-
+const audienceBtn = document.querySelector(".audienceBtn")
+const notChosen = document.querySelector(".notChoose");
+const startAgain2 = document.querySelector(".start-again2");
+const logOut = document.querySelector(".logOut")
 let option1id = optionContainer1.children[0].id
 let option2id = optionContainer1.children[1].id
 let option3id = optionContainer2.children[0].id
 let option4id = optionContainer2.children[1].id
+const audienceBar1 = document.getElementById("audienceBar1");
+const audienceBar2 = document.getElementById("audienceBar2");
+const audienceBar3 = document.getElementById("audienceBar3");
+const audienceBar4 = document.getElementById("audienceBar4");
+const audiencePollBar = document.querySelector(".audiencePoll-bar")
+const goWithAudience = document.querySelector(".goWithAudience");
+const majorityPoll = document.querySelector(".majority-poll")
+const goWithYes = document.querySelector(".goWithYes");
+const goWithNo = document.querySelector(".goWithNo");
 
-
-// let count = 6;
-// function counter (){
-//  let t = setInterval(()=>{
-//             count--
-//             timer.innerText = count
-//         },1000)
-
-//    if(count < 1){
-//     clearInterval(t)
-//     timer.innerText = count
-//     console.log(count)
-//    }
-
-// }
-//console.log(fetch("https://kbc-ten.vercel.app//question/all"))
-
-// start.addEventListener("click", counter)
 let prize = [
 
 
@@ -104,14 +82,46 @@ let prize = [
     { money: 5000000, id: 13 },
     { money: 10000000, id: 14 },
     { money: 50000000, id: 15 },
+    { money: 0, id: 16 }
 
 ]
+
+var timerCount = document.getElementById("countD");
+var count = 60;
+let interval;
+function startCountDown() {
+
+    interval = setInterval(countDown, 1000);
+   
+}
+function reset() {
+    count = 60
+    timerCount.innerText = count;
+}
+function pause(){
+    clearInterval(interval)
+    timerCount.innerText = count;
+}
+function countDown() {
+
+    if (count < 0) {
+        clearInterval(interval)
+        notChosen.style.display = "block";
+
+    }
+    else {
+        timerCount.innerText = count--
+        notChosen.style.display = "none";
+    }
+
+}
 
 
 
 let increase = 0
 let getCur;
 function getCurrentQuestion() {
+
     let randomQue = Math.floor(Math.random() * queSet1.length)
     question.innerText = queSet1[randomQue].prompt
     option1.innerText = queSet1[randomQue].options[0].text
@@ -119,7 +129,8 @@ function getCurrentQuestion() {
     option3.innerText = queSet1[randomQue].options[2].text
     option4.innerText = queSet1[randomQue].options[3].text
     return getCur = queSet1[randomQue]
-
+    
+  
 };
 getCurrentQuestion(queSet1[getCur])
 let changeBackground = 14
@@ -132,17 +143,22 @@ function correctAnswer(e) {
         return answer;
     })
     if (getCur.correctOption == answer) {
-        if (prize[increase].id < 15) {
+        if (prize[increase].id < 16) {
             showCorrect.style.display = "block"
             moneyWon.innerText = prize[increase].money
             increase++
             moneyContainer.children[changeBackground].style.backgroundColor = "green"
             changeBackground--
-            
+
         }
-        else if (prize[increase].id == 15) {
+        else if (prize[increase].id == 16) {
             congratsMsg.style.display = "block"
             winnerName.innerText = yourName.value
+            notChosen.style.display = "none"
+            fiftyBtn.disabled = true;
+            flipBtn.setAttribute = ('disabled', true);
+            winnerName.innerText = yourName.value
+            pause()
         }
 
 
@@ -155,42 +171,146 @@ function correctAnswer(e) {
 
 }
 
-function fiftyOption() {   
-    if (getCur.correctOption == option1id){
+function fiftyOption() {
+    if (getCur.correctOption == option1id) {
         document.getElementById("3").disabled = true;
         document.getElementById("4").disabled = true;
         document.getElementById("3").style.backgroundColor = "red";
         document.getElementById("4").style.backgroundColor = "red";
         chooseLifeline.style.display = "none"
         fiftyBtn.disabled = true;
-        
-    }else if(getCur.correctOption == option2id){
+        fiftyFifty.style.backgroundColor = "red"
+
+    } else if (getCur.correctOption == option2id) {
         document.getElementById("1").disabled = true;
         document.getElementById("2").disabled = true;
         chooseLifeline.style.display = "none"
         document.getElementById("1").style.backgroundColor = "red";
         document.getElementById("2").style.backgroundColor = "red";
         fiftyBtn.disabled = true;
-    }else if(getCur.correctOption == option3id) { 
+        fiftyFifty.style.backgroundColor = "red"
+    } else if (getCur.correctOption == option3id) {
         document.getElementById("1").disabled = true;
         document.getElementById("2").disabled = true;
         chooseLifeline.style.display = "none"
         document.getElementById("1").style.backgroundColor = "red";
         document.getElementById("2").style.backgroundColor = "red";
         fiftyBtn.disabled = true;
-    }else if(getCur.correctOption == option4id) { 
+        fiftyFifty.style.backgroundColor = "red"
+    } else if (getCur.correctOption == option4id) {
         document.getElementById("1").disabled = true;
         document.getElementById("2").disabled = true;
         chooseLifeline.style.display = "none"
         document.getElementById("1").style.backgroundColor = "red";
         document.getElementById("2").style.backgroundColor = "red";
         fiftyBtn.disabled = true;
+        fiftyFifty.style.backgroundColor = "red"
     }
 
 }
 
+function poll() {
+    if (getCur.correctOption == option1id) {
+        chooseLifeline.style.display = "none"
+        audiencePollBar.style.display = "flex"
+        audiencePoll.style.backgroundColor = "red";
+        audienceBtn.disabled = "true";
+        setTimeout(() => {
+            audienceBar1.style.backgroundColor = "green";
+            audienceBar1.innerText = "80%";
+            audienceBar1.style.height = "8em"
+            audienceBar2.style.backgroundColor = "yellow";
+            audienceBar2.innerText = "20%";
+            audienceBar2.style.height = "4em"
+            audienceBar3.style.backgroundColor = "red";
+            audienceBar3.innerText = "10%";
+            audienceBar3.style.height = "2em"
+            audienceBar4.style.backgroundColor = "orange";
+            audienceBar4.innerText = "30%";
+            audienceBar4.style.height = "6em"
+            
+        }, 15000)
+        setTimeout(() => {
+            goWithAudience.style.display = "block";
+            majorityPoll.innerText = "A"
+        }, 15000)
+    }
+    else if (getCur.correctOption == option2id) {
+        chooseLifeline.style.display = "none"
+        audiencePollBar.style.display = "flex"
+        audiencePoll.style.backgroundColor = "red";
+        audienceBtn.disabled = "true";
+        setTimeout(() => {
+            audienceBar2.style.backgroundColor = "green";
+            audienceBar2.innerText = "80%";
+            audienceBar2.style.height = "8em"
+            audienceBar1.style.backgroundColor = "yellow";
+            audienceBar1.innerText = "20%";
+            audienceBar1.style.height = "4em"
+            audienceBar3.style.backgroundColor = "red";
+            audienceBar3.innerText = "10%";
+            audienceBar3.style.height = "2em"
+            audienceBar4.style.backgroundColor = "orange";
+            audienceBar4.innerText = "30%";
+            audienceBar4.style.height = "6em"
+        }, 15000)
+        setTimeout(() => {
+            goWithAudience.style.display = "block";
+            majorityPoll.innerText = "B"
+        }, 20000)
+    }
+    else if (getCur.correctOption == option3id) {
+        chooseLifeline.style.display = "none"
+        audiencePollBar.style.display = "flex"
+        audiencePoll.style.backgroundColor = "red";
+        audienceBtn.disabled = "true";
+        setTimeout(() => {
+            audienceBar3.style.backgroundColor = "green";
+            audienceBar3.innerText = "80%";
+            audienceBar3.style.height = "8em"
+            audienceBar4.style.backgroundColor = "yellow";
+            audienceBar4.innerText = "20%";
+            audienceBar4.style.height = "4em"
+            audienceBar1.style.backgroundColor = "red";
+            audienceBar1.innerText = "10%";
+            audienceBar1.style.height = "2em"
+            audienceBar2.style.backgroundColor = "orange";
+            audienceBar2.innerText = "30%";
+            audienceBar2.style.height = "6em"
+        }, 15000)
+        setTimeout(() => {
+            goWithAudience.style.display = "block";
+            majorityPoll.innerText = "C"
+        }, 20000)
+    }
+    else if (getCur.correctOption == option4id) {
+        chooseLifeline.style.display = "none"
+        audiencePollBar.style.display = "flex"
+        audiencePoll.style.backgroundColor = "red";
+        audienceBtn.disabled = "true";
+        setTimeout(() => {
+            audienceBar4.style.backgroundColor = "green";
+            audienceBar4.innerText = "80%";
+            audienceBar4.style.height = "8em"
+            audienceBar3.style.backgroundColor = "yellow";
+            audienceBar3.innerText = "20%";
+            audienceBar3.style.height = "4em"
+            audienceBar1.style.backgroundColor = "red";
+            audienceBar1.innerText = "10%";
+            audienceBar1.style.height = "2em"
+            audienceBar2.style.backgroundColor = "orange";
+            audienceBar2.innerText = "30%";
+            audienceBar2.style.height = "6em"
+        }, 15000)
+        setTimeout(() => {
+            goWithAudience.style.display = "block";
+            majorityPoll.innerText = "D"
+        }, 20000)
+    }
+}
 start.addEventListener("click", () => {
     window.location.href = "./index.html"
+
 })
 option2.addEventListener("click", correctAnswer)
 option3.addEventListener("click", correctAnswer)
@@ -209,7 +329,8 @@ startAgain.addEventListener("click", () => {
     getCurrentQuestion()
     showWrong.style.display = "none"
     window.location.href = "./index.html"
-    timerStart()
+    
+
 })
 
 
@@ -228,17 +349,22 @@ nextQuestion.addEventListener("click", () => {
     document.getElementById("2").style.cssText = "color:white;";
     document.getElementById("3").style.cssText = "color:white;";
     document.getElementById("4").style.cssText = "color:white;";
-    
+    reset()
+    // startCountDown()
+  
 })
 
 fiftyBtn.addEventListener("click", () => {
     lifeLinePermission.style.display = "block"
+    pause()
 })
 flip.addEventListener("click", () => {
     lifeLinePermission.style.display = "block"
+    pause()
 })
 audiencePoll.addEventListener("click", () => {
     lifeLinePermission.style.display = "block"
+    pause()
 })
 yes.addEventListener("click", () => {
     lifeLinePermission.style.display = "none"
@@ -254,19 +380,44 @@ startQuiz.addEventListener("click", () => {
         showYourName.style.backgroundColor = "#002069"
         play.style.display = "none"
         getCurrentQuestion()
-        
+        startCountDown()
     }
     else {
 
         play.style.display = "block"
     }
+
 })
 exitQuiz.addEventListener("click", () => {
     window.location.href = "./login.html"
 })
-lifeFlip.addEventListener("click",()=>{
+lifeFlip.addEventListener("click", () => {
     chooseLifeline.style.display = "none"
     getCurrentQuestion()
     flipBtn.disabled = true;
-    
+    flip.style.backgroundColor = "red"
+
+})
+
+
+startAgain2.addEventListener("click", () => {
+    getCurrentQuestion()
+    reset()
+    startCountDown()
+    notChosen.style.display = "none"
+})
+logOut.addEventListener("click", () => {
+    window.location.href = "./login.html"
+})
+
+lifeAudiencePoll.addEventListener("click", poll)
+goWithYes.addEventListener("click", () => {
+    goWithAudience.style.display = "none";
+    audiencePollBar.style.display = "none"
+
+})
+goWithNo.addEventListener("click", () => {
+    goWithAudience.style.display = "none";
+    audiencePollBar.style.display = "none"
+
 })

@@ -95,52 +95,58 @@ body {
 .lifeline-img:hover {
     background-color: rgba(11, 91, 161, 0.452);
 }
-.fiftyBtn{
+
+.fiftyBtn {
     background-color: transparent;
-     margin-top: .2em;
-     width: 80%;
-     margin-left: 12px;
-     border-radius: 20px;
-     border: none;
-     
-}
-.fiftyBtn>img {
-    width: 60%;
-    
+    margin-top: .2em;
+    width: 80%;
+    margin-left: 12px;
+    border-radius: 20px;
+    border: none;
+
 }
 
-.flipBtn{
-     background-color: transparent;
-     margin-top: .2em;
-     width: 80%;
-     margin-left: 12px;
-     border-radius: 20px;
-    
-     
+.fiftyBtn>img {
+    width: 60%;
+
 }
+
+.flipBtn {
+    background-color: transparent;
+    margin-top: .2em;
+    width: 80%;
+    margin-left: 12px;
+    border-radius: 20px;
+    border: none;
+
+}
+
 .flipBtn>img {
     width: 60%;
-    
+
 }
-.audienceBtn{
+
+.audienceBtn {
     background-color: transparent;
-     margin-top: .5em;
-     
-     width: 80%;
-     margin-left: 12px;
-     border-radius: 20px;
-     
+    margin-top: .5em;
+    border: none;
+    width: 80%;
+    margin-left: 12px;
+    border-radius: 20px;
+
 }
+
 .audienceBtn>img {
     width: 60%;
-    
+
 }
-.lifeline-permission{
+
+.lifeline-permission {
     display: none;
     position: absolute;
     top: -7em;
     left: -5em;
-    background-color:#002069 ;
+    background-color: #002069;
     color: white;
     padding: 3.8em;
     font-size: 1.8rem;
@@ -149,7 +155,8 @@ body {
     border: 5px solid white;
     transition: .7s;
 }
-#yes{
+
+#yes {
     padding: .3em;
     width: 15%;
     margin-right: 10%;
@@ -158,12 +165,14 @@ body {
     border-radius: 10px;
     border: white;
 }
-#yes:hover{
-   background-color:#7192df ;
-   transition: 1s;
-   color: white;
+
+#yes:hover {
+    background-color: #7192df;
+    transition: 1s;
+    color: white;
 }
-#no{
+
+#no {
     padding: .3em;
     width: 15%;
     margin-right: 10%;
@@ -172,11 +181,12 @@ body {
     border-radius: 10px;
     border: white;
 }
-#no:hover{
-   background-color:#7192df ;
-   
-   transition: 1s;
-   color: white;
+
+#no:hover {
+    background-color: #7192df;
+
+    transition: 1s;
+    color: white;
 }
 
 
@@ -240,8 +250,8 @@ body {
 
 .stop-watch>p {
     background-color: red;
-    padding: .5em;
-    border-radius: 50%;
+    padding: .8em;
+    border-radius: 70%;
     margin: 2px;
 }
 
@@ -250,6 +260,12 @@ body {
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     background-color: yellow;
+    min-width: 50px;
+    min-height: 30px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+
 }
 
 .show-correct {
@@ -283,8 +299,9 @@ body {
 
 .show-msg {
     position: absolute;
-    left: 10px;
+    left: 9px;
     width: 100%;
+    top: -45px;
 }
 
 .start-again {
@@ -332,9 +349,10 @@ body {
     font-size: 1.4rem;
     font-weight: bold;
     color: white;
-    margin-top: 25px;
+    margin-top: 20px;
 }
-#start:hover{
+
+#start:hover {
     background-color: #012e99;
 }
 
@@ -348,7 +366,8 @@ body {
     font-weight: bold;
     color: white;
 }
-.show-name{
+
+.show-name {
     width: 20%;
     background-color: transparent;
     padding: .4em;
@@ -358,13 +377,16 @@ body {
     font-weight: bold;
     color: white;
 }
-#quit:hover{
+
+#quit:hover {
     background-color: #012e99;
 }
-.start-game{
+
+.start-game {
     position: relative;
 }
-.prize-money{
+
+.prize-money {
     color: white;
     background-color: transparent;
     width: 20%;
@@ -375,17 +397,18 @@ body {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     font-size: 2rem;
-} 
-.prize-money:hover{
-   background-color: #012e99;
 }
 
-.lifeline-choose{
+.prize-money:hover {
+    background-color: #012e99;
+}
+
+.lifeline-choose {
     display: none;
     position: absolute;
     top: -7em;
     left: -5em;
-    background-color:#002069 ;
+    background-color: #002069;
     color: white;
     padding: 3em;
     font-size: 1.8rem;
@@ -393,41 +416,49 @@ body {
     border-radius: 50px;
     border: 5px solid white;
     transition: .7s;
-   
+
 }
-.lifeline-select{
+
+.lifeline-select {
     display: flex;
     border: 5px solid #055de5;
     border-radius: 10px;
     justify-content: space-around;
 }
-.fifty-fifty{
+
+.fifty-fifty {
     border: 2px solid #055de5;
     margin: 2px;
 }
-.fifty-fifty:hover{
-   background-color: black;
-}
-.flip{
-    border: 2px solid #055de5;
-    margin: 2px;
-}
-.flip:hover{
+
+.fifty-fifty:hover {
     background-color: black;
- }
-.audience-poll{
+}
+
+.flip {
     border: 2px solid #055de5;
     margin: 2px;
 }
-.audience-poll:hover{
+
+.flip:hover {
     background-color: black;
- }
- .play{
+}
+
+.audience-poll {
+    border: 2px solid #055de5;
+    margin: 2px;
+}
+
+.audience-poll:hover {
+    background-color: black;
+}
+
+.play {
     /* display: none; */
     position: absolute;
     top: -10em;
     left: -5em;
-    background-color:#002069 ;
+    background-color: #002069;
     color: white;
     padding: 3em;
     font-size: 1.8rem;
@@ -436,8 +467,9 @@ body {
     border: 5px solid white;
     transition: .7s;
     height: 60vh;
- }
- .start-quiz{
+}
+
+.start-quiz {
     width: 20%;
     background-color: transparent;
     padding: .4em;
@@ -447,9 +479,9 @@ body {
     font-weight: bold;
     color: white;
     margin-top: 10px;
- }
- 
- .exit-quiz{
+}
+
+.exit-quiz {
     width: 20%;
     background-color: transparent;
     padding: .4em;
@@ -458,24 +490,24 @@ body {
     font-size: 1.4rem;
     font-weight: bold;
     color: white;
- }
- 
-
-.your-name{
-   padding: .4em;
-   border: none;
-   border-radius: 10px;
-   width: 40%;
-   margin-bottom: 10px;
-   outline: none;
 }
 
-.won-prize{
+
+.your-name {
+    padding: .4em;
+    border: none;
+    border-radius: 10px;
+    width: 40%;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.won-prize {
     display: none;
     position: absolute;
-    top: -10em;
+    top: -5em;
     left: -5em;
-    background-color:#002069 ;
+    background-color: #002069;
     color: white;
     padding: 3em;
     font-size: 1.8rem;
@@ -486,3 +518,197 @@ body {
     height: 40vh;
 }
 
+.notChoose {
+    display: none;
+    position: absolute;
+    top: -5.4em;
+    left: -5em;
+    background-color: #002069;
+    color: white;
+    padding: 3em;
+    font-size: 1.8rem;
+    width: 140%;
+    border-radius: 50px;
+    border: 5px solid white;
+    transition: .7s;
+    height: 40vh;
+}
+
+.start-again2 {
+    width: 20%;
+    padding: .5em;
+    background-color: blue;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.logOut {
+    width: 20%;
+    padding: .5em;
+    background-color: blue;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.audiencePoll-bar {
+    position: absolute;
+    min-width: 100%;
+    border: 2px solid white;
+    top: -15em;
+    height: 20em;
+    left: 5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: #002069;
+    border-radius: 15px;
+    display: none;
+
+}
+
+
+.audincePoll-1 {
+    border: 2px solid white;
+    width: 15%;
+    height: 10em;
+    bottom: 0;
+    animation: animate1 1.1s linear 10;
+    background-color: red;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.audincePoll-2 {
+    border: 2px solid white;
+    width: 15%;
+    height: 10em;
+    bottom: 0;
+    animation: animate2 1s linear 10;
+    background-color: green;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.audincePoll-3 {
+    border: 2px solid white;
+    width: 15%;
+    height: 10em;
+    bottom: 0;
+    animation: animate3 1.3s linear 10;
+    background-color: yellow;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.audincePoll-4 {
+    border: 2px solid white;
+    width: 15%;
+    height: 10em;
+    bottom: 0;
+    animation: animate4 1.2s linear 10;
+    background-color: orange;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+@keyframes animate1 {
+    50% {
+        height: 20%;
+    }
+
+    100% {
+        height: 100%;
+    }
+
+}
+
+@keyframes animate2 {
+    50% {
+        height: 20%;
+    }
+
+    100% {
+        height: 100%;
+    }
+
+}
+
+@keyframes animate3 {
+    50% {
+        height: 20%;
+    }
+
+    100% {
+        height: 100%;
+    }
+
+}
+
+@keyframes animate4 {
+    50% {
+        height: 20%;
+    }
+
+    100% {
+        height: 100%;
+    }
+
+}
+
+.goWithAudience {
+    position: absolute;
+    min-width: 100%;
+    border: 2px solid white;
+    top: -10em;
+    height: 10em;
+    left: 5em;
+    background-color: #002069;
+    border-radius: 15px;
+    
+    font-size: 1.2em;
+    padding: 2em;
+
+    display: none;
+}
+
+.goWithYes {
+    padding: .3em;
+    width: 15%;
+    margin-right: 10%;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: white;
+}
+
+.goWithYes:hover {
+    background-color: #7192df;
+    transition: 1s;
+    color: white;
+}
+
+.gowithNo {
+    padding: .3em;
+    width: 15%;
+    margin-right: 10%;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: white;
+}
+
+.gowithNo:hover {
+    background-color: #7192df;
+
+    transition: 1s;
+    color: white;
+}
+.option-span{
+    color: #012e99;
+}

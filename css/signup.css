@@ -3,6 +3,89 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* .sign-up-container{
-  
-} */
+body{
+   
+    background:url("../images/kbc-11.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0, 0, 0.4);
+    height: 400px;
+  }
+
+  .sign-up-container{
+    width: 30%;
+    margin: 7em 50em;
+    background-color: #0037c7;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55vh;
+    padding: 4em 2em;
+    border-radius: 10px;
+  }
+  #user-name{
+    font-size: 1.2rem;
+    padding: .2em;
+    border-radius: 10px;
+    width: 25vw;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #email{
+    font-size: 1.2rem;
+    padding: .2em;
+    border-radius: 10px;
+    width: 25vw;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #password{
+    font-size: 1.2rem;
+    padding: .2em;
+    border-radius: 10px;
+    width: 25vw;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #confirm-password{
+    font-size: 1.2rem;
+    padding: .2em;
+    border-radius: 10px;
+    width: 25vw;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #login-btn{
+    margin-top: 30px;
+    width: 30%;
+    padding: .4em;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    
+  }
+#submit-btn{
+    margin-top: 30px;
+    width: 30%;
+    padding: .4em;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    
+}
+#submit-btn:hover{
+    background-color:#3062d6 ;
+    color: white;
+}
+#login-btn:hover{
+    background-color:#3062d6 ;
+    color: white;
+}

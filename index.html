@@ -20,6 +20,7 @@
             <button id="start">Start</button>
             <button id="quit">Quit</button>
             <button class="show-name">Your Name</button>
+            <span class="count-down">60</span>
             <div class="prize-money">&#x20B9 <span class="money"></span></div>
         </div>
         <div class="container">
@@ -29,9 +30,12 @@
                 </div>
                 <div class="aside">
                     <div class="lifeline-container">
-                        <div class="lifeline-img fifty-fifty"><button class="fiftyBtn"><img src="./images/fifty_fifty.png" alt=""> </button></div>
-                        <div class="lifeline-img flip"><button class="flipBtn"><img src="./images/flip_the_question.png" alt=""></button></div>
-                        <div class="lifeline-img audience-poll"><button class="audienceBtn"><img src="./images/audience_poll.png" alt=""></button></div>
+                        <div class="lifeline-img fifty-fifty"><button class="fiftyBtn"><img
+                                    src="./images/fifty_fifty.png" alt=""> </button></div>
+                        <div class="lifeline-img flip"><button class="flipBtn"><img src="./images/flip_the_question.png"
+                                    alt=""></button></div>
+                        <div class="lifeline-img audience-poll"><button class="audienceBtn"><img
+                                    src="./images/audience_poll.png" alt=""></button></div>
 
                     </div>
                     <div class="moneyContainer">
@@ -115,7 +119,7 @@
                     <p></p>
                     <p></p>
                     <div>
-                        <p class="timer"></p>
+                        <p class="timer"><span id="countD">60</span></p>
                     </div>
                     <p></p>
                     <p></p>
@@ -139,7 +143,7 @@
             </div>
             <div class="option-container">
                 <div class="option-container_child1">
-                    <button class="option optionhover option1 answer" id="1">Option 1</button>
+                    <button class="option optionhover option1 answer" id="1">Option 1 <span class="option-span">A :</span></button>
                     <button class="option optionhover option2 answer" id="2">Option 2</button>
                 </div>
                 <div class="option-container_child2">
@@ -185,6 +189,26 @@
                     <div>
                         <p>Congratulation <span id="winnerName"></span> You Won</p>
                     </div>
+                </div>
+                <div class="notChoose">
+                    <div>
+                        <p>Oh! You didn't choose any option</p>
+                        <button class="start-again2">Start Again</button>
+                        <button class="logOut">Log Out</button>
+                    </div>
+                </div>
+                <div class="audiencePoll-bar">
+                    <div class="audincePoll-1" id="audienceBar1"></div>
+                    <div class="audincePoll-2" id="audienceBar2"></div>
+                    <div class="audincePoll-3" id="audienceBar3"></div>
+                    <div class="audincePoll-4" id="audienceBar4"></div>
+
+                </div>
+                <div class="goWithAudience">
+                    <p>Would you like to go with the Audience?</p>
+                    <button class="goWithYes">Yes</button>
+                    <button class="goWithNo">No</button>
+                    <p>Majority of the Audience is with option <span class="majority-poll"></span></p>
                 </div>
             </div>
     </section>

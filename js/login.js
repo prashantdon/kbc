@@ -17,13 +17,13 @@ function checkUser (e){
         method : "POST",
 
     };
-    fetch("https://kbc-ten.vercel.app//user/login", options)
+    fetch("https://kbc-ten.vercel.app/user/login", options)
     .then((resolve)=>{
         return resolve.json();
     })
     .then((data)=>{
         localStorage.setItem("loggedInUser",JSON.stringify(data))
-        window.location.href = "./kbc.html";
+        window.location.href = "./index.html";
     })
     .catch((error) =>{
         alert(error);
@@ -36,5 +36,5 @@ function checkUser (e){
 
 logInBtn.addEventListener("click", checkUser)
 signUpBtn.addEventListener("click",()=>{
-    window.location.href = "./index.html"
+    window.location.href = "./signup.html"
 })
